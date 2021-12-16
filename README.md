@@ -30,7 +30,24 @@ Par exemple, prenons l'attribut "flag". On avait déjà vu dans la question 3 qu
 
 ## Question 6 
 
-(Pensez à décocher la case "induce binary tree" de Tree). 
+(Penser à décocher la case "induce binary tree" de Tree). 
+
+## Question 7 
+
+* Arbre : 
+
+	- Avec les règles aprises :  on a probe à 97 % avec "dst_host_srv_rerror_rate >=01 AND service=other"
+	- Avec l'arbre de décision : on a probe à 10% avec la valeur "OTH" du flag
+
+* KNN : 
+
+* Random Forest : 
+
+* CN2 Rule Induction :
+
+
+
+
 
 
 
