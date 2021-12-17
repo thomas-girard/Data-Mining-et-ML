@@ -53,7 +53,7 @@ Par exemple, prenons l'attribut "flag". On avait déjà vu dans la question 3 qu
 	- nombre de faux positifs : 87
 	- nombre de faux négatifs : 190
 	- En supposant dix connexions légitimes par seconde, nombre de
-faux positifs par jour en moyenne : on a donc 864 000 connexions légitimes par jour. On a 190 faux négatifs parmi les 89 418 instances, donc en une journée, cela génèrerait 841 faux positifs
+faux positifs par jour en moyenne : on a donc 864 000 connexions légitimes par jour. On a 87 faux positifs parmi les 57 979 instances légitimes, donc en une journée, cela génèrerait 1297 faux positifs
 
 * random forest
 
@@ -61,7 +61,7 @@ faux positifs par jour en moyenne : on a donc 864 000 connexions légitimes par 
 	- nombre de faux positifs : 17
 	- nombre de faux négatifs :  83
 	- En supposant dix connexions légitimes par seconde, nombre de
-faux positifs par jour en moyenne : 164
+faux positifs par jour en moyenne : 253
 
 * CNN
 
@@ -69,10 +69,10 @@ faux positifs par jour en moyenne : 164
 	- nombre de faux positifs : 110
 	- nombre de faux négatifs : 188
 	- En supposant dix connexions légitimes par seconde, nombre de
-faux positifs par jour en moyenne : 1063
+faux positifs par jour en moyenne : 1639
 
 
-Le nombre de faux positif par jour n'est pas satisfaisant : dans les 3 cas, une personne aurait du mal à vérifier chacun des faux positifs alors même que l'accuracy semble élevé. Il est nécessaire de réaliser un filtrage automatique plus précis de tous les cas positifs pour distinguer les positifs des faux positifs avant la vérification d'un informaticien. On remarque aussi que les forêts d'arbres aléatoires ont une meilleure accuracy et moins de faux négatifs que les arbres seuls ou les CNN, le modèle est plus performant.
+Le nombre de faux positif par jour n'est pas satisfaisant : dans les 3 cas, une personne aurait du mal à vérifier chacun des faux positifs alors même que l'accuracy semble élevé. Il est nécessaire de réaliser un filtrage automatique plus précis de tous les cas positifs avant une vérification manuelle. On remarque aussi que les forêts d'arbres aléatoires ont une meilleure accuracy et moins de faux positifs/négatifs que les arbres seuls ou les CNN, le modèle est donc plus performant.
 
 
 
