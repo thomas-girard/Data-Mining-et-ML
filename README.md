@@ -45,11 +45,36 @@ Par exemple, prenons l'attribut "flag". On avait déjà vu dans la question 3 qu
 	- Avec les règles aprises :  on a probe à 97 % avec "dst_host_srv_rerror_rate >=01 AND service=other"
 	- Avec l'arbre de décision : on a probe à 10% avec la valeur "OTH" du flag
 
-* KNN :
+## Question 8
 
-* Random Forest :
+* arbre
 
-* CN2 Rule Induction :
+	- accuracy : 0.994
+	- nombre de faux positifs : 87
+	- nombre de faux négatifs : 190
+	- En supposant dix connexions légitimes par seconde, nombre de
+faux positifs par jour en moyenne : on a donc 864 000 connexions légitimes par jour. On a 190 faux négatifs parmi les 89 418 instances, donc en une journée, cela génèrerait 841 faux positifs
+
+* random forest
+
+	- accuracy : 0.999
+	- nombre de faux positifs : 17
+	- nombre de faux négatifs :  83
+	- En supposant dix connexions légitimes par seconde, nombre de
+faux positifs par jour en moyenne : 164
+
+* CNN
+
+	- accuracy : 0.995
+	- nombre de faux positifs : 110
+	- nombre de faux négatifs : 188
+	- En supposant dix connexions légitimes par seconde, nombre de
+faux positifs par jour en moyenne : 1063
+
+
+Le nombre de faux positif par jour n'est pas satisfaisant : dans les 3 cas, une personne aurait du mal à vérifier chacun des faux positifs alors même que l'accuracy semble élevé. Il est nécessaire de réaliser un filtrage automatique plus précis de tous les cas positifs pour distinguer les positifs des faux positifs avant la vérification d'un informaticien. On remarque aussi que les forêts d'arbres aléatoires ont une meilleure accuracy et moins de faux négatifs que les arbres seuls ou les CNN, le modèle est plus performant.
+
+
 
 
 
